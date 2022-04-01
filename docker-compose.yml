@@ -19,6 +19,7 @@ services:
       - ./dev/docker/init.db:/docker-entrypoint-initdb.d
       - db:/var/lib/mysql
   app:
+    tty: true
     build:
       context: .
       dockerfile: ./dev/docker/Dockerfile
